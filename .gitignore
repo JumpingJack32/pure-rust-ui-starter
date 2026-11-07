@@ -1,0 +1,37 @@
+/target/
+/.cargo/
+
+# Default ignored files
+/shelf/
+/workspace.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+# Ignored default folder with query files
+/queries/
+# Datasource local storage ignored files
+/dataSources/
+/dataSources.local.xml
+
+/local.db
+# Rust build artifacts
+/target/
+**/*.rs.bk
+
+# Leptos specific
+.leptos/
+pkg/
+target/site/
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Optional: Node modules (if you ever run npm/pnpm for tailwind)
+node_modules/
+.target/

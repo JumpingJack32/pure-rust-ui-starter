@@ -1,0 +1,62 @@
+[workspace]
+resolver = "2"
+members = ["app", "server"]
+
+
+[workspace.dependencies]
+#  ----- Leptos UI and ICONS -----
+leptos_ui = "0.3"
+icons = { version = "0.19", features = ["leptos"] }
+
+
+anyhow = "1"
+axum = { version = "0.8", features = ["macros"] }
+axum-macros = "0.5"
+console_error_panic_hook = "0.1"
+console_log = "1"
+dotenv = "0.15"
+http = "1"
+leptos = { version = "0.9.0-rc1" }
+leptos_axum = "0.9.0-rc1"
+leptos_meta = "0.9.0-rc1"
+leptos_router = "0.9.0-rc1"
+log = "0.4"
+serde = { version = "1", features = ["derive"] }
+struct_field_names = "0.2"
+strum = { version = "0.28", features = ["derive"] }
+strum_macros = "0.28"
+sqlx = { version = "0.9", features = ["runtime-tokio", "tls-rustls", "postgres", "macros", "uuid", "time", "json"] }
+time = { version = "0.3", features = ["serde"] }
+tokio = { version = "1", features = ["rt-multi-thread"] }
+thiserror = "2"
+tower = "0.5"
+tower-http = { version = "0.7", features = ["fs"] }
+tracing = "0.1"
+tracing-log = "0.2"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+tw_merge = { version = "0.1", features = ["variant", "debug"] }
+uuid = { version = "1", default-features = false, features = ["v4", "v7", "js", "serde"] }
+wasm-bindgen = "0.2"
+web-sys = { version = "0.3", features = ["Storage", "Window", "MediaQueryList"] }
+
+
+[[workspace.metadata.leptos]]
+name = "rust_ui_starter"
+bin-package = "server"
+lib-package = "app"
+site-root = "target/site"
+assets-dir = "public"
+site-pkg-dir = "pkg"
+browserquery = "defaults"
+bin-features = ["ssr"]
+bin-default-features = false
+lib-features = ["hydrate"]
+lib-default-features = false
+
+tailwind-input-file = "style/tailwind.css"
+site-addr = "127.0.0.1:3000"
+reload-port = 3001
+
+
+
+
