@@ -1,6 +1,6 @@
 [workspace]
 resolver = "2"
-members = ["app", "server"]
+members = ["app", "server", "ui_components"]
 
 
 [workspace.dependencies]

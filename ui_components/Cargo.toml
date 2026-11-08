@@ -1,0 +1,14 @@
+# /ui_components/Cargo.toml
+[package]
+name = "ui_components"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+leptos.workspace = true
+web-sys = { workspace = true }
+
+
+[features]
+hydrate = ["leptos/hydrate"]
+ssr = ["leptos/ssr"]

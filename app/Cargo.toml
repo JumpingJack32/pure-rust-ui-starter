@@ -12,6 +12,7 @@ crate-type = ["cdylib", "rlib"]
 [dependencies]
 leptos_ui.workspace = true
 icons.workspace = true
+ui_components = { path = "../ui_components" }
 
 anyhow.workspace = true
 console_error_panic_hook.workspace = true
