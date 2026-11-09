@@ -55,14 +55,13 @@ pub fn FaqSection() -> impl IntoView {
 
                     <AccordionItem>
                         <AccordionTrigger open=item3 class="text-base sm:text-lg font-semibold">
-                            "Can I use Axum 0.9.0-rc as the backend framework?"
+                            "Can I use Axum 0.89 as the backend framework?"
                         </AccordionTrigger>
                         <AccordionContent
                             open=item3
                             class="text-gray-600 dark:text-gray-400 leading-relaxed"
                         >
                             "Absolutely. Leptos integrates smoothly with Axum 0.89 for full SSR (Server-Side Rendering), server functions, and REST API routing within a single Rust workspace. "
-                            "We are showcasing Axum 0.9.0-rc; as a release candidate, it is expected to become the stable release imminently."
                         </AccordionContent>
                     </AccordionItem>
 

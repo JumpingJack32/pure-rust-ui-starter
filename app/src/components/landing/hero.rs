@@ -36,7 +36,7 @@ pub fn Hero() -> impl IntoView {
 
                     // --- Subtitle Description ---
                     <p class="mt-6 text-lg sm:text-xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-2xl mx-auto">
-                        "A blazingly fast, type-safe framework for modern web applications. Powered by Tailwind CSS v4 and Axum 0.9.0-rc backend integration."
+                        "A blazingly fast, type-safe framework for modern web applications. Powered by Tailwind CSS v4 and Axum 0.8 backend integration."
                     </p>
 
                     // --- CTA Action Buttons ---
