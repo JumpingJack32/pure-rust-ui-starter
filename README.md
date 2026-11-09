@@ -29,6 +29,13 @@ A clean starting point for building a desktop or native user interface entirely 
 
 This project is designed to give you a simple, modern foundation for creating a UI-driven Rust application without needing a separate JavaScript or frontend stack.
 
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="/public/landing.jpeg" />
+    <img alt="Pure Rust-UI Starter" src="/public/landing.jpeg" />
+  </picture>
+</p>
+
 ## Why this starter?
 
 - Pure Rust application development
