@@ -1,7 +1,7 @@
 // use crate::HeroCard;
 use leptos::prelude::*;
 use ui_components::Badge;
-use ui_components::{Button, ButtonVariant};
+use ui_components::{Button, ButtonSize, ButtonVariant, button_variants};
 
 #[component]
 pub fn Hero() -> impl IntoView {
@@ -27,7 +27,7 @@ pub fn Hero() -> impl IntoView {
                     </div>
 
                     // --- Hero Title ---
-                    <h1 class="text-4xl font-extrabold tracking-tight sm:text-6xl md:text-7xl text-gray-900 dark:text-white">
+                    <h1 class="text-4xl font-extrabold tracking-tight sm:text-6xl md:text-7xl text-[#0F4761] dark:text-white">
                         "Build Full-Stack Apps with "
                         <span class="bg-linear-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
                             "Leptos & Rust"
@@ -36,7 +36,7 @@ pub fn Hero() -> impl IntoView {
 
                     // --- Subtitle Description ---
                     <p class="mt-6 text-lg sm:text-xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-2xl mx-auto">
-                        "A blazingly fast, type-safe framework for modern web applications. Powered by Tailwind CSS v4 and Axum 0.8 backend integration."
+                        "A blazingly fast, type-safe framework for modern web applications. Powered by Tailwind CSS v4 and Axum 0.9.0-rc backend integration."
                     </p>
 
                     // --- CTA Action Buttons ---
@@ -44,15 +44,14 @@ pub fn Hero() -> impl IntoView {
                         <Button class="w-full sm:w-auto h-12 px-8 text-base shadow-lg shadow-indigo-500/25">
                             "Get Started Free"
                         </Button>
-                        // <Button variant="outline" class="w-full sm:w-auto h-12 px-8 text-base">
-                        // <GithubIcon class="mr-2 h-5 w-5" />
-                        // "View on GitHub"
-                        // // https://github.com/JumpingJack32/pure-rust-ui-starter
-                        // </Button>
                         <a
+                            target="_blank"
                             href="https://github.com/JumpingJack32/pure-rust-ui-starter"
-                            class=ButtonVariant::Outline
-                                .to_classes("w-full sm:w-auto h-12 px-8 text-base")
+                            class=button_variants(
+                                ButtonVariant::Outline,
+                                ButtonSize::Lg,
+                                "w-full sm:w-auto h-12 px-8 text-base",
+                            )
                         >
                             <GithubIcon class="mr-2 h-5 w-5" />
                             "View on GitHub"

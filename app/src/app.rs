@@ -1,8 +1,10 @@
-use crate::components::landing::{Hero, Navbar};
+use crate::components::landing::{
+    AboutCompany, CtaSection, FaqSection, FeaturesSection, Footer, Hero, Navbar, ServicesSection,
+    Sponsors, TeamSection, TestimonialsSection,
+};
 use leptos::prelude::*;
 use leptos_meta::*;
 use leptos_router::{components::*, path};
-use ui_components::Button;
 use ui_components::ThemeProvider;
 
 #[component]
@@ -29,25 +31,21 @@ fn HomePage() -> impl IntoView {
     // let (count, set_count) = signal(0);
 
     view! {
-        <div class="min-h-screen w-screen bg-background text-foreground transition-colors duration-200">
-            <Navbar />
-            <Hero />
-        // <div class="p-8 m-4">
-        // <p class="p-8 m-4 text-amber-600">
-        // "Welcome to your high-performance Leptos scaffold."
-        // </p>
-        // <div class="m4">
-        // <Button class="m-4" variant="primary">
-        // "Primary Button"
-        // </Button>
-        // <Button class="m-4" variant="outline">
-        // "Outline Button"
-        // </Button>
-        // <Button class="m-4" variant="ghost">
-        // "Ghost Button"
-        // </Button>
-        // </div>
-        // </div>
-        </div>
+        <main class="min-h-screen w-screen bg-background text-foreground transition-colors duration-200">
+            <div>
+                <Navbar />
+                <Hero />
+                <Sponsors />
+                <AboutCompany />
+                <FeaturesSection />
+                <ServicesSection />
+                <TestimonialsSection />
+                <TeamSection />
+                // <ContactSection />
+                <CtaSection />
+                <FaqSection />
+            </div>
+            <Footer />
+        </main>
     }
 }

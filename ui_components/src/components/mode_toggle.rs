@@ -1,7 +1,5 @@
-// app/src/components/mode_toggle.rs
 use crate::components::theme_provider::{Theme, ThemeContext};
-// use crate::components::theme_provider::ThemeContext;
-use crate::components::ui::button::Button; // Adjust path if your button is elsewhere
+use crate::components::ui::button::{Button, ButtonSize, ButtonVariant};
 use leptos::prelude::*;
 
 #[component]
@@ -19,11 +17,15 @@ pub fn ModeToggle() -> impl IntoView {
     };
 
     view! {
-        <Button variant="outline" on:click=toggle_theme class="px-3 py-1.5 text-xs font-semibold">
+        <Button
+            variant=ButtonVariant::Ghost
+            size=ButtonSize::Icon
+            on:click=toggle_theme
+        >
             {move || match theme_ctx.theme.get() {
-                Theme::Light => "☀️ Light",
-                Theme::Dark => "🌙 Dark",
-                Theme::System => "💻 System",
+                Theme::Light => "☀️",
+                Theme::Dark => "🌙",
+                Theme::System => "💻",
             }}
         </Button>
     }

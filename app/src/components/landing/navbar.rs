@@ -1,8 +1,8 @@
+use leptos::prelude::*;
 use ui_components::ModeToggle;
-use ui_components::Button;
+use ui_components::{Button, ButtonVariant};
 use ui_components::{NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuList};
 use ui_components::{Sheet, SheetContent, SheetHeader, SheetTitle};
-use leptos::prelude::*;
 
 #[component]
 pub fn Navbar() -> impl IntoView {
@@ -11,7 +11,7 @@ pub fn Navbar() -> impl IntoView {
     let nav_items = vec![
         ("Features", "#features"),
         ("Testimonials", "#testimonials"),
-        ("Pricing", "#pricing"),
+        ("Contact", "#contact"),
         ("FAQ", "#faq"),
     ];
 
@@ -56,9 +56,7 @@ pub fn Navbar() -> impl IntoView {
                 // --- Desktop Navigation Menu ---
                 <div class="hidden md:flex items-center gap-6">
                     <NavigationMenu>
-                        <NavigationMenuList>
-                            {desktop_nav}
-                        </NavigationMenuList>
+                        <NavigationMenuList>{desktop_nav}</NavigationMenuList>
                     </NavigationMenu>
                 </div>
 
@@ -67,14 +65,14 @@ pub fn Navbar() -> impl IntoView {
                     <ModeToggle />
 
                     <div class="hidden md:flex items-center gap-2">
-                        <Button variant="ghost">"Sign In"</Button>
-                        <Button variant="outline">"Get Started"</Button>
+                        <Button variant=ButtonVariant::Ghost>"Sign In"</Button>
+                        <Button variant=ButtonVariant::Outline>"Get Started"</Button>
                     </div>
 
                     // --- Mobile Menu Trigger ---
                     <div class="md:hidden">
                         <Button
-                            variant="ghost"
+                            variant=ButtonVariant::Ghost
                             class="px-2"
                             on:click=move |_| is_mobile_open.set(true)
                         >
@@ -95,12 +93,10 @@ pub fn Navbar() -> impl IntoView {
                         </SheetTitle>
                     </SheetHeader>
 
-                    <nav class="flex flex-col gap-4 py-6">
-                        {mobile_nav}
-                    </nav>
+                    <nav class="flex flex-col gap-4 py-6">{mobile_nav}</nav>
 
                     <div class="flex flex-col gap-3 mt-auto pt-6 border-t border-gray-200 dark:border-gray-800">
-                        <Button variant="outline" class="w-full">
+                        <Button variant=ButtonVariant::Outline class="w-full">
                             "Sign In"
                         </Button>
                         <Button class="w-full">"Get Started"</Button>

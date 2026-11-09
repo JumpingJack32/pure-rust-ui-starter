@@ -11,7 +11,8 @@ pub use components::ui::avatar::{
     Avatar, AvatarBadge, AvatarFallback, AvatarGroup, AvatarGroupCount, AvatarImage,
 };
 pub use components::ui::badge::Badge;
-pub use components::ui::button::{Button, ButtonVariant};
+// pub use components::ui::button::{Button, ButtonVariant};
+pub use components::ui::button::{button_variants, Button, ButtonSize, ButtonVariant};
 pub use components::ui::card::{
     Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle,
 };

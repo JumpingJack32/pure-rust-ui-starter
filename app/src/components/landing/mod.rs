@@ -1,5 +1,25 @@
+pub mod about;
+// pub mod contact;
+pub mod cta;
+pub mod faq;
+pub mod features;
+pub mod footer;
 pub mod hero;
 pub mod navbar;
+pub mod services;
+pub mod sponsors;
+pub mod team;
+pub mod testimonials;
 
+pub use about::AboutCompany;
+// pub use contact::ContactSection;
+pub use cta::CtaSection;
+pub use faq::FaqSection;
+pub use features::FeaturesSection;
+pub use footer::Footer;
 pub use hero::Hero;
 pub use navbar::Navbar;
+pub use services::ServicesSection;
+pub use sponsors::Sponsors;
+pub use team::TeamSection;
+pub use testimonials::TestimonialsSection;
