@@ -1,7 +1,7 @@
 // use crate::HeroCard;
 use leptos::prelude::*;
 use ui_components::Badge;
-use ui_components::Button;
+use ui_components::{Button, ButtonVariant};
 
 #[component]
 pub fn Hero() -> impl IntoView {
@@ -44,10 +44,19 @@ pub fn Hero() -> impl IntoView {
                         <Button class="w-full sm:w-auto h-12 px-8 text-base shadow-lg shadow-indigo-500/25">
                             "Get Started Free"
                         </Button>
-                        <Button variant="outline" class="w-full sm:w-auto h-12 px-8 text-base">
+                        // <Button variant="outline" class="w-full sm:w-auto h-12 px-8 text-base">
+                        // <GithubIcon class="mr-2 h-5 w-5" />
+                        // "View on GitHub"
+                        // // https://github.com/JumpingJack32/pure-rust-ui-starter
+                        // </Button>
+                        <a
+                            href="https://github.com/JumpingJack32/pure-rust-ui-starter"
+                            class=ButtonVariant::Outline
+                                .to_classes("w-full sm:w-auto h-12 px-8 text-base")
+                        >
                             <GithubIcon class="mr-2 h-5 w-5" />
                             "View on GitHub"
-                        </Button>
+                        </a>
                     </div>
 
                     // --- Social Proof / Stats Summary ---
