@@ -35,3 +35,4 @@ Thumbs.db
 # Optional: Node modules (if you ever run npm/pnpm for tailwind)
 node_modules/
 .target/
+/SCRATCHPAD.md

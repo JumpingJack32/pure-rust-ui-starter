@@ -1,4 +1,4 @@
-use crate::components::landing::Navbar;
+use crate::components::landing::{Hero, Navbar};
 use leptos::prelude::*;
 use leptos_meta::*;
 use leptos_router::{components::*, path};
@@ -31,26 +31,23 @@ fn HomePage() -> impl IntoView {
     view! {
         <div class="min-h-screen w-screen bg-background text-foreground transition-colors duration-200">
             <Navbar />
-            // <header class="p-4 border-b border-border flex justify-between items-center">
-            // <h1 class="text-xl font-bold">"My Leptos App"</h1>
-            // <ModeToggle />
-            // </header>
-            <div class="p-8 m-4">
-                <p class="p-8 m-4 text-amber-600">
-                    "Welcome to your high-performance Leptos scaffold."
-                </p>
-                <div class="m4">
-                    <Button class="m-4" variant="primary">
-                        "Primary Button"
-                    </Button>
-                    <Button class="m-4" variant="outline">
-                        "Outline Button"
-                    </Button>
-                    <Button class="m-4" variant="ghost">
-                        "Ghost Button"
-                    </Button>
-                </div>
-            </div>
+            <Hero />
+        // <div class="p-8 m-4">
+        // <p class="p-8 m-4 text-amber-600">
+        // "Welcome to your high-performance Leptos scaffold."
+        // </p>
+        // <div class="m4">
+        // <Button class="m-4" variant="primary">
+        // "Primary Button"
+        // </Button>
+        // <Button class="m-4" variant="outline">
+        // "Outline Button"
+        // </Button>
+        // <Button class="m-4" variant="ghost">
+        // "Ghost Button"
+        // </Button>
+        // </div>
+        // </div>
         </div>
     }
 }
