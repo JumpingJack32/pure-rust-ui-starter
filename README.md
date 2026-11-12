@@ -100,16 +100,26 @@ cargo run
 ├── app
 │   ├── Cargo.toml
 │   └── src
+│       ├── app.rs
+│       ├── components
+│       └── lib.rs
 ├── Cargo.lock
 ├── Cargo.toml
 ├── public
+│   └── landing.jpeg
 ├── README.md
 ├── server
 │   ├── Cargo.toml
 │   └── src
+│       └── main.rs
 ├── style
 │   ├── tailwind.css
 │   └── tailwindcss-animate.css
+└── ui_components
+    ├── Cargo.toml
+    └── src
+        ├── components
+        └── lib.rs
 
 ```
 
