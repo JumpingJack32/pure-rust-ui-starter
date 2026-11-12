@@ -4,18 +4,31 @@ use ui_components::{Button, ButtonVariant};
 use ui_components::{NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuList};
 use ui_components::{Sheet, SheetContent, SheetHeader, SheetTitle};
 
+// struct NavItem<'a> {
+//     label: &'a str,
+//     href: &'a str,
+// }
+
+// let nav_items = vec![ // 👈 vec![] where the nav items is dynamic (see below for constant)...
+//     NavItem { label: "Features", href: "#features" },
+//     NavItem { label: "Testimonials", href: "#testimonials" },
+//     NavItem { label: "Contact", href: "#contact" },
+//     NavItem { label: "FAQ", href: "#faq" },
+// ];
+
 #[component]
 pub fn Navbar() -> impl IntoView {
     let is_mobile_open = RwSignal::new(false);
 
-    let nav_items = vec![
+    // 👇 Note a `const` variable in uppercase, for improved performance. Annotation not neccesary!
+    const NAV_ITEMS: [(&str, &str); 4] = [
         ("Features", "#features"),
         ("Testimonials", "#testimonials"),
         ("Contact", "#contact"),
         ("FAQ", "#faq"),
     ];
 
-    let desktop_nav = nav_items
+    let desktop_nav = NAV_ITEMS
         .iter()
         .map(|&(label, href)| {
             view! {
@@ -26,7 +39,7 @@ pub fn Navbar() -> impl IntoView {
         })
         .collect_view();
 
-    let mobile_nav = nav_items
+    let mobile_nav = NAV_ITEMS
         .iter()
         .map(|&(label, href)| {
             let close_sheet = move |_| is_mobile_open.set(false);
